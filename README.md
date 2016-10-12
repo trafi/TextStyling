@@ -34,10 +34,10 @@ enum TextStyle: String, TextStylingEnum {
 ```
 # Usage
 ## From code
-There's a `styleText(to:)` defined for text-based UI elements. Just call it providing one of your styles.
+There's a `style(to:)` defined for text-based UI elements. Just call it providing one of your styles.
 ```swift
 let titleLabel = UILabel()
-titleLabel.style
+titleLabel.style(to: .header)
 ```
 ## From Interface Builder
 To access 
