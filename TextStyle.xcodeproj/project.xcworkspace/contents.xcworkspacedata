@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TextStyling.xcodeproj">
+      location = "self:/Users/Domas/Develop/Open Trafi/TextStyling/TextStyle.xcodeproj">
    </FileRef>
 </Workspace>

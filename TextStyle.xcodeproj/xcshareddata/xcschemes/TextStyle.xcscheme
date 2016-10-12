@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D36852C91DAE4A1B00EDFCA1"
-               BuildableName = "TextStyling.framework"
-               BlueprintName = "TextStyling"
-               ReferencedContainer = "container:TextStyling.xcodeproj">
+               BuildableName = "TextStyle.framework"
+               BlueprintName = "TextStyle"
+               ReferencedContainer = "container:TextStyle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D36852C91DAE4A1B00EDFCA1"
-            BuildableName = "TextStyling.framework"
-            BlueprintName = "TextStyling"
-            ReferencedContainer = "container:TextStyling.xcodeproj">
+            BuildableName = "TextStyle.framework"
+            BlueprintName = "TextStyle"
+            ReferencedContainer = "container:TextStyle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D36852C91DAE4A1B00EDFCA1"
-            BuildableName = "TextStyling.framework"
-            BlueprintName = "TextStyling"
-            ReferencedContainer = "container:TextStyling.xcodeproj">
+            BuildableName = "TextStyle.framework"
+            BlueprintName = "TextStyle"
+            ReferencedContainer = "container:TextStyle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

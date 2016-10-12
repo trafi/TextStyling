@@ -1,6 +1,6 @@
 //
 //  UILabel.swift
-//  TextStyling
+//  TextStyle
 //
 //  Created by Domas on 12/10/2016.
 //  Copyright © 2016 Trafi. All rights reserved.
@@ -13,13 +13,13 @@ public extension UILabel {
     @IBInspectable var textStyle: String {
         get { return "" }
         set {
-            guard let style = TextStylingSettings.enumType?.init(rawValue: newValue) else { return }
-            self.style(to: style)
+            guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.style(withName: newValue) else { return }
+            set(textStyle: textStyle)
         }
     }
     #endif
     
-    func style(to textStyle: TextStyling) {
+    func set(textStyle textStyle: TextStyle) {
         textColor = textStyle.color
         font = textStyle.font
     }

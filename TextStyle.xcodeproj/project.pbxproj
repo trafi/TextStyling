@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D36852D71DAE4AC300EDFCA1 /* TextStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852D61DAE4AC300EDFCA1 /* TextStyling.swift */; };
-		D36852D91DAE4B5100EDFCA1 /* TextStylingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852D81DAE4B5100EDFCA1 /* TextStylingSettings.swift */; };
+		D36852D71DAE4AC300EDFCA1 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */; };
+		D36852D91DAE4B5100EDFCA1 /* IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */; };
 		D36852DC1DAE4B9F00EDFCA1 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852DB1DAE4B9F00EDFCA1 /* UILabel.swift */; };
 		D36852DE1DAE4C2C00EDFCA1 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852DD1DAE4C2C00EDFCA1 /* UITextField.swift */; };
 		D36852E01DAE4D0D00EDFCA1 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */; };
@@ -16,10 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D36852CA1DAE4A1B00EDFCA1 /* TextStyling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextStyling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36852CA1DAE4A1B00EDFCA1 /* TextStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36852CE1DAE4A1B00EDFCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D36852D61DAE4AC300EDFCA1 /* TextStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyling.swift; sourceTree = "<group>"; };
-		D36852D81DAE4B5100EDFCA1 /* TextStylingSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStylingSettings.swift; sourceTree = "<group>"; };
+		D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectable.swift; sourceTree = "<group>"; };
 		D36852DB1DAE4B9F00EDFCA1 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		D36852DD1DAE4C2C00EDFCA1 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		D36852C01DAE4A1B00EDFCA1 = {
 			isa = PBXGroup;
 			children = (
-				D36852CC1DAE4A1B00EDFCA1 /* TextStyling */,
+				D36852CC1DAE4A1B00EDFCA1 /* TextStyle */,
 				D36852CB1DAE4A1B00EDFCA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,25 +48,25 @@
 		D36852CB1DAE4A1B00EDFCA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D36852CA1DAE4A1B00EDFCA1 /* TextStyling.framework */,
+				D36852CA1DAE4A1B00EDFCA1 /* TextStyle.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D36852CC1DAE4A1B00EDFCA1 /* TextStyling */ = {
+		D36852CC1DAE4A1B00EDFCA1 /* TextStyle */ = {
 			isa = PBXGroup;
 			children = (
 				D36852D51DAE4A9300EDFCA1 /* Source */,
 				D36852CE1DAE4A1B00EDFCA1 /* Info.plist */,
 			);
-			path = TextStyling;
+			path = TextStyle;
 			sourceTree = "<group>";
 		};
 		D36852D51DAE4A9300EDFCA1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D36852D61DAE4AC300EDFCA1 /* TextStyling.swift */,
-				D36852D81DAE4B5100EDFCA1 /* TextStylingSettings.swift */,
+				D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */,
+				D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */,
 				D36852DA1DAE4B9800EDFCA1 /* Extensions */,
 			);
 			path = Source;
@@ -96,9 +96,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D36852C91DAE4A1B00EDFCA1 /* TextStyling */ = {
+		D36852C91DAE4A1B00EDFCA1 /* TextStyle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D36852D21DAE4A1B00EDFCA1 /* Build configuration list for PBXNativeTarget "TextStyling" */;
+			buildConfigurationList = D36852D21DAE4A1B00EDFCA1 /* Build configuration list for PBXNativeTarget "TextStyle" */;
 			buildPhases = (
 				D36852C51DAE4A1B00EDFCA1 /* Sources */,
 				D36852C61DAE4A1B00EDFCA1 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = TextStyling;
+			name = TextStyle;
 			productName = TextStyling;
-			productReference = D36852CA1DAE4A1B00EDFCA1 /* TextStyling.framework */;
+			productReference = D36852CA1DAE4A1B00EDFCA1 /* TextStyle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D36852C41DAE4A1B00EDFCA1 /* Build configuration list for PBXProject "TextStyling" */;
+			buildConfigurationList = D36852C41DAE4A1B00EDFCA1 /* Build configuration list for PBXProject "TextStyle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D36852C91DAE4A1B00EDFCA1 /* TextStyling */,
+				D36852C91DAE4A1B00EDFCA1 /* TextStyle */,
 			);
 		};
 /* End PBXProject section */
@@ -162,10 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36852D91DAE4B5100EDFCA1 /* TextStylingSettings.swift in Sources */,
+				D36852D91DAE4B5100EDFCA1 /* IBInspectable.swift in Sources */,
 				D36852DC1DAE4B9F00EDFCA1 /* UILabel.swift in Sources */,
 				D36852E01DAE4D0D00EDFCA1 /* UITextView.swift in Sources */,
-				D36852D71DAE4AC300EDFCA1 /* TextStyling.swift in Sources */,
+				D36852D71DAE4AC300EDFCA1 /* TextStyle.swift in Sources */,
 				D36852DE1DAE4C2C00EDFCA1 /* UITextField.swift in Sources */,
 				D36852E21DAE4D8A00EDFCA1 /* UIButton.swift in Sources */,
 			);
@@ -315,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D36852C41DAE4A1B00EDFCA1 /* Build configuration list for PBXProject "TextStyling" */ = {
+		D36852C41DAE4A1B00EDFCA1 /* Build configuration list for PBXProject "TextStyle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D36852D01DAE4A1B00EDFCA1 /* Debug */,
@@ -324,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D36852D21DAE4A1B00EDFCA1 /* Build configuration list for PBXNativeTarget "TextStyling" */ = {
+		D36852D21DAE4A1B00EDFCA1 /* Build configuration list for PBXNativeTarget "TextStyle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D36852D31DAE4A1B00EDFCA1 /* Debug */,
