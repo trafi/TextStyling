@@ -18,7 +18,7 @@ import Foundation
              switch name {
              case "header":
                  return .header
-             case "body':
+             case "body":
                  return .body
              case "footer":
                  return .footer
