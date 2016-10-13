@@ -8,18 +8,10 @@
 
 import UIKit
 
-public extension UITextView {
-    #if TARGET_INTERFACE_BUILDER
-    @IBInspectable var textStyle: String {
-        get { return "" }
-        set {
-            guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.stylesDictionary[newValue] else { return }
-            set(textStyle: textStyle)
-        }
-    }
-    #endif
-    
-    func set(textStyle textStyle: TextStyle) {
+// MARK: TextStylable
+
+extension UITextView: TextStylable {
+    public func set(textStyle textStyle: TextStyle) {
         if let textColor = textStyle.color {
             self.textColor = textColor
         }
@@ -30,6 +22,22 @@ public extension UITextView {
             self.textAlignment = textAlignment
         }
     }
+}
+
+// MARK: Interface Builder
+
+public extension UITextView {
+    #if TARGET_INTERFACE_BUILDER
+    @IBInspectable var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+    #else
+    internal var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+    #endif
 }
 
 /// `UITextView` that renders in Interface Builder as an `@IBDesignbale`

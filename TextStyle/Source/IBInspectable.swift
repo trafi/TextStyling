@@ -27,3 +27,10 @@ import Foundation
 public protocol IBInspectable {
     static var stylesDictionary: [String: TextStyle] { get }
 }
+
+extension TextStylable {
+    func set(textStyleIBString string: String) {
+        guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.stylesDictionary[string] else { return }
+        set(textStyle: textStyle)
+    }
+}

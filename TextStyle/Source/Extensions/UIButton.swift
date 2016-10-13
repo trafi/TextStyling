@@ -8,23 +8,31 @@
 
 import UIKit
 
-public extension UIButton {
-    #if TARGET_INTERFACE_BUILDER
-    @IBInspectable var textStyle: String {
-        get { return "" }
-        set {
-            guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.stylesDictionary[newValue] else { return }
-            set(textStyle: textStyle)
-        }
-    }
-    #endif
-    
-    func set(textStyle textStyle: TextStyle) {
+// MARK: TextStylable
+
+extension UIButton: TextStylable {
+    public func set(textStyle textStyle: TextStyle) {
         if let color = textStyle.color {
             setTitleColor(color, forState: .Normal)
         }
         titleLabel?.set(textStyle: textStyle)
     }
+}
+
+// MARK: Interface Builder
+
+public extension UIButton {
+    #if TARGET_INTERFACE_BUILDER
+    @IBInspectable var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+    #else
+    internal var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+    #endif
 }
 
 /// `Button` that renders in Interface Builder as an `@IBDesignbale`
