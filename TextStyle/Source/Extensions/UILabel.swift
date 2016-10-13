@@ -20,8 +20,15 @@ public extension UILabel {
     #endif
     
     func set(textStyle textStyle: TextStyle) {
-        textColor = textStyle.color
-        font = textStyle.font
+        if let textColor = textStyle.color {
+            self.textColor = textColor
+        }
+        if let font = textStyle.font {
+            self.font = font
+        }
+        if let textAlignment = textStyle.alignment {
+            self.textAlignment = textAlignment
+        }
     }
 }
 

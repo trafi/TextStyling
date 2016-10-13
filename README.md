@@ -7,18 +7,17 @@ Helps you manage text styles in your app.
 Extend `TextStyle` with `static` variables for different text styles used in your app:
 ```swift
 extension TextStyle {
-    static let header = TextStyle(
-        font: .boldSystemFontOfSize(18),
-        color: .redColor()
-    )
-    static let body = TextStyle(
-        font: .systemFontOfSize(16),
-        color: .blackColor()
-    )
-    static let footer = TextStyle(
-        font: .italicSystemFontOfSize(12),
-        color: .darkGrayColor()
-    )
+    static let header = TextStyle()
+        .with(font: .boldSystemFontOfSize(18))
+        .with(color: .redColor())
+        .with(alignment: .Center)
+    
+    static let body = TextStyle()
+        .with(font: .systemFontOfSize(16))
+    
+    static let footer = TextStyle()
+        .with(font: .italicSystemFontOfSize(12))
+        .with(color: .grayColor())
 }
 ```
 # Usage
@@ -46,9 +45,9 @@ extension TextStyle: IBInspectable {
     }
 }
 ```
-In the Interface Builder set `Text Style` to mathc your style's name.
+In the Interface Builder set `Text Style` to match your style's name.
 
-To see style changes right in the Interface Builder use `Designable` to UI elements classes. (i.e. `UILabelDesignable`).
+To see style changes right in the Interface Builder use `Designable` UI elements classes. (i.e. `UILabelDesignable`).
 
 # Installation
 Using [Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application). Add the following line to your Cartfile:

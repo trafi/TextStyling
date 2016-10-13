@@ -20,7 +20,9 @@ public extension UIButton {
     #endif
     
     func set(textStyle textStyle: TextStyle) {
-        setTitleColor(textStyle.color, forState: .Normal)
+        if let color = textStyle.color {
+            setTitleColor(color, forState: .Normal)
+        }
         titleLabel?.set(textStyle: textStyle)
     }
 }

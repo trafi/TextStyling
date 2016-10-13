@@ -14,22 +14,42 @@ import UIKit
  ## Describing styles
  
      extension TextStyle {
-         static let header = TextStyle(
-             font: .boldSystemFontOfSize(18),
-             color: .redColor()
-         )
-         static let body = TextStyle(
-             font: .systemFontOfSize(16),
-             color: .blackColor()
-         )
-         static let footer = TextStyle(
-             font: .italicSystemFontOfSize(12),
-             color: .darkGrayColor()
-         )
+         static let header = TextStyle()
+             .with(font: .boldSystemFontOfSize(18))
+             .with(color: .redColor())
+             .with(alignment: .Center)
+         
+         static let body = TextStyle()
+             .with(font: .systemFontOfSize(16))
+         
+         static let footer = TextStyle()
+             .with(font: .italicSystemFontOfSize(12))
+             .with(color: .grayColor())
      }
  
 */
 public struct TextStyle {
-    let font: UIFont
-    let color: UIColor
+    var font: UIFont?
+    var color: UIColor?
+    var alignment: NSTextAlignment?
+    
+    init(){}
+}
+
+public extension TextStyle {
+    private func with(@noescape changes: (inout TextStyle) -> ()) -> TextStyle {
+        var changedTextStyle = self
+        changes(&changedTextStyle)
+        return changedTextStyle
+    }
+    
+    func with(font font: UIFont) -> TextStyle {
+        return with{ $0.font = font }
+    }
+    func with(color color: UIColor) -> TextStyle {
+        return with{ $0.color = color }
+    }
+    func with(alignment alignment: NSTextAlignment) -> TextStyle {
+        return with{ $0.alignment = alignment }
+    }
 }
