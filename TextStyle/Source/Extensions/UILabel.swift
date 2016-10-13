@@ -13,7 +13,7 @@ public extension UILabel {
     @IBInspectable var textStyle: String {
         get { return "" }
         set {
-            guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.style(withName: newValue) else { return }
+            guard let textStyle = (TextStyle.self as? IBInspectable.Type)?.stylesDictionary[newValue] else { return }
             set(textStyle: textStyle)
         }
     }

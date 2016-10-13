@@ -14,21 +14,16 @@ import Foundation
  ## Implementation
  
      extension TextStyle: IBInspectable {
-         static func style(withName name: String) -> TextStyle?
-             switch name {
-             case "header":
-                 return .header
-             case "body":
-                 return .body
-             case "footer":
-                 return .footer
-             defatult:
-                 return nil
-             }
+         static var stylesDictionary: [String : TextStyle] {
+             return [
+                 "header": .header,
+                 "body":   .body,
+                 "footer": .footer
+             ]
          }
      }
 
  */
 public protocol IBInspectable {
-    static func style(withName name: String) -> TextStyle?
+    static var stylesDictionary: [String: TextStyle] { get }
 }
