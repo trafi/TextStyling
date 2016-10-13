@@ -33,7 +33,7 @@ public struct TextStyle {
     var color: UIColor?
     var alignment: NSTextAlignment?
     
-    init(){}
+    public init(){}
 }
 
 public extension TextStyle {
