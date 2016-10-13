@@ -52,5 +52,5 @@ To see style changes right in the Interface Builder use `Designable` UI elements
 # Installation
 Using [Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application). Add the following line to your Cartfile:
 ```
-github "Trafi/TextStyling"
+github "Trafi/TextStyle"
 ```
