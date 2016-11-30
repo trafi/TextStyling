@@ -10,5 +10,5 @@ import Foundation
 
 public protocol TextStylable {
     associatedtype ReturnType
-    func set(textStyle textStyle: TextStyle) -> ReturnType
+    func set(textStyle textStyle: TextStyle)
 }
