@@ -20,6 +20,7 @@
 		D36852E01DAE4D0D00EDFCA1 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */; };
 		D36852E21DAE4D8A00EDFCA1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852E11DAE4D8A00EDFCA1 /* UIButton.swift */; };
 		D3839C231DAF7FAF00ABCD81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3839C221DAF7FAF00ABCD81 /* String.swift */; };
+		D3DCEF901DEF3859001431D4 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DCEF8F1DEF3858001431D4 /* Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		D36852E11DAE4D8A00EDFCA1 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D3839C221DAF7FAF00ABCD81 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D3DCEF8F1DEF3858001431D4 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				D36852DD1DAE4C2C00EDFCA1 /* UITextField.swift */,
 				D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */,
 				D36852E11DAE4D8A00EDFCA1 /* UIButton.swift */,
+				D3DCEF8F1DEF3858001431D4 /* Attributes.swift */,
 				D3839C221DAF7FAF00ABCD81 /* String.swift */,
 			);
 			path = Extensions;
@@ -251,6 +254,7 @@
 				D31C22761DAF7A9D00600BC3 /* TextStylable.swift in Sources */,
 				D36852DE1DAE4C2C00EDFCA1 /* UITextField.swift in Sources */,
 				D3839C231DAF7FAF00ABCD81 /* String.swift in Sources */,
+				D3DCEF901DEF3859001431D4 /* Attributes.swift in Sources */,
 				D36852E21DAE4D8A00EDFCA1 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
