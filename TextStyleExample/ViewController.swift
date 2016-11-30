@@ -18,5 +18,18 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet var attributedLabel: UILabel! {
+        didSet {
+            let attributes = TextStyle()
+                .with(font: .italicSystemFontOfSize(18))
+                .with(color: .grayColor())
+                .with(alignment: .Right)
+                .attributes()
+            
+            attributedLabel.attributedText = NSAttributedString(string: "Attributed string\nFrom code",
+                                                                attributes: attributes)
+        }
+    }
+    
 }
 
