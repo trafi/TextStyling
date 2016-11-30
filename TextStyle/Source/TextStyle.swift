@@ -52,19 +52,4 @@ public extension TextStyle {
     func with(alignment alignment: NSTextAlignment) -> TextStyle {
         return with{ $0.alignment = alignment }
     }
-    
-    /* get attributes */
-    func attributes() -> [String:AnyObject] {
-        var attributes = [String:AnyObject]()
-        
-        if let font = font { attributes[NSFontAttributeName] = font }
-        if let color = color { attributes[NSForegroundColorAttributeName] = color }
-        if let alignment = alignment {
-            let style = NSMutableParagraphStyle()
-            style.alignment = alignment
-            attributes[NSParagraphStyleAttributeName] = style
-        }
-        
-        return attributes
-    }
 }
