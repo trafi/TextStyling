@@ -19,6 +19,11 @@ extension String: TextStylable {
         if let font = textStyle.font {
             attributes[NSFontAttributeName] = font
         }
+        if let alignment = textStyle.alignment {
+            let style = NSMutableParagraphStyle()
+            style.alignment = alignment
+            attributes[NSParagraphStyleAttributeName] = style
+        }
         return NSAttributedString(string: self, attributes: attributes)
     }
 }
