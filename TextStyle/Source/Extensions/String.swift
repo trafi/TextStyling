@@ -8,17 +8,39 @@
 
 import UIKit
 
-// MARK: TextStylable
-
-extension String: TextStylable {
-    public func set(textStyle textStyle: TextStyle) -> NSAttributedString {
+private extension TextStyle {
+    var attributes: [String: AnyObject] {
+        
         var attributes = [String: AnyObject]()
-        if let textColor = textStyle.color {
-            attributes[NSForegroundColorAttributeName] = textColor
+        
+        attributes[NSForegroundColorAttributeName] = color
+        attributes[NSFontAttributeName] = font
+        attributes[NSParagraphStyleAttributeName] = alignment.flatMap { alignment in
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = alignment
+            return paragraphStyle
         }
-        if let font = textStyle.font {
-            attributes[NSFontAttributeName] = font
-        }
-        return NSAttributedString(string: self, attributes: attributes)
+        
+        return attributes
+    }
+}
+
+extension String {
+    public func with(textStyle textStyle: TextStyle) -> NSAttributedString {
+        return NSAttributedString(string: self, attributes: textStyle.attributes)
+    }
+    public func with(textStyle textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
+        return NSAttributedString(string: self).with(textStyle: textStyle, forRange: range)
+    }
+}
+
+extension NSAttributedString {
+    public func with(textStyle textStyle: TextStyle) -> NSAttributedString {
+        return string.with(textStyle: textStyle)
+    }
+    public func with(textStyle textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
+        let mutable = self as? NSMutableAttributedString ?? NSMutableAttributedString(attributedString: self)
+        mutable.setAttributes(textStyle.attributes, range: range)
+        return mutable
     }
 }
