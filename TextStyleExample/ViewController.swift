@@ -10,7 +10,7 @@ import UIKit
 import TextStyle
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var label: UILabel! {
         didSet {
             label.set(textStyle: TextStyle.header.with(color: .blueColor()))
@@ -18,5 +18,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet var attributedLabel: UILabel! {
+        didSet {
+            let style = TextStyle()
+                .with(font: .italicSystemFontOfSize(18))
+                .with(color: .grayColor())
+                .with(alignment: .Right)
+            
+            attributedLabel.attributedText = "Attributed string\nFrom code".with(textStyle: style)
+        }
+    }
 }
 
