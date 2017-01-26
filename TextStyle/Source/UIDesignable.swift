@@ -12,10 +12,10 @@ import UIKit
 @IBDesignable public class UILabelDesignable: UILabel {}
 
 /// `UITextField` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextFieldDesignable: UILabel {}
+@IBDesignable public class UITextFieldDesignable: UITextField {}
 
 /// `UITextView` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextViewDesignable: UILabel {}
+@IBDesignable public class UITextViewDesignable: UITextView {}
 
 /// `Button` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UIButtonDesignable: UILabel {}
+@IBDesignable public class UIButtonDesignable: UIButton {}
