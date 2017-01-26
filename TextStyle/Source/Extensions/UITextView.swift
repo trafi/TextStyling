@@ -26,16 +26,9 @@ extension UITextView: TextStylable {
 
 // MARK: Interface Builder
 
-public extension UITextView {
-    #if TARGET_INTERFACE_BUILDER
-    @IBInspectable var textStyle: String {
+extension UITextView {
+    var textStyle: String {
         get { return "" }
-        set { set(textStyleIBString: newValue) }
+        set { set(textStyle: newValue) }
     }
-    #else
-    internal var textStyle: String {
-        get { return "" }
-        set { set(textStyleIBString: newValue) }
-    }
-    #endif
 }

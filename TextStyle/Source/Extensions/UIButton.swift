@@ -21,16 +21,9 @@ extension UIButton: TextStylable {
 
 // MARK: Interface Builder
 
-public extension UIButton {
-    #if TARGET_INTERFACE_BUILDER
-    @IBInspectable var textStyle: String {
+extension UIButton {
+    var textStyle: String {
         get { return "" }
-        set { set(textStyleIBString: newValue) }
+        set { set(textStyle: newValue) }
     }
-    #else
-    internal var textStyle: String {
-        get { return "" }
-        set { set(textStyleIBString: newValue) }
-    }
-    #endif
 }

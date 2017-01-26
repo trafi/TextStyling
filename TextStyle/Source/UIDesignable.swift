@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import TextStyle
 
 /// `UILabel` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UILabelDesignable: UILabel {}
+@IBDesignable public class UILabelDesignable: UILabel, IBTextStylable {
+    @IBInspectable public var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+}
 
 /// `UITextField` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextFieldDesignable: UITextField {}
+@IBDesignable public class UITextFieldDesignable: UITextField, IBTextStylable {
+    @IBInspectable public var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+}
 
 /// `UITextView` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextViewDesignable: UITextView {}
+@IBDesignable public class UITextViewDesignable: UITextView, IBTextStylable {
+    @IBInspectable public var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+}
 
 /// `Button` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UIButtonDesignable: UIButton {}
+@IBDesignable public class UIButtonDesignable: UIButton, IBTextStylable {
+    @IBInspectable public var textStyle: String {
+        get { return "" }
+        set { set(textStyleIBString: newValue) }
+    }
+}

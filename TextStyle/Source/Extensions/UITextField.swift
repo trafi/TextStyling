@@ -26,16 +26,9 @@ extension UITextField: TextStylable {
 
 // MARK: Interface Builder
 
-public extension UITextField {
-    #if TARGET_INTERFACE_BUILDER
-    @IBInspectable var textStyle: String {
+extension UITextField {
+    var textStyle: String {
         get { return "" }
-        set { set(textStyleIBString: newValue) }
+        set { set(textStyle: newValue) }
     }
-    #else
-    internal var textStyle: String {
-        get { return "" }
-        set { set(textStyleIBString: newValue) }
-    }
-    #endif
 }
