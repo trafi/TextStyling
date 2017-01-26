@@ -34,6 +34,3 @@ public extension UIButton {
     }
     #endif
 }
-
-/// `Button` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UIButtonDesignable: UILabel {}

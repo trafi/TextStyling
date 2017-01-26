@@ -39,6 +39,3 @@ public extension UITextField {
     }
     #endif
 }
-
-/// `UITextField` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextFieldDesignable: UILabel {}

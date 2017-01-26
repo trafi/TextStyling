@@ -39,6 +39,3 @@ public extension UITextView {
     }
     #endif
 }
-
-/// `UITextView` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UITextViewDesignable: UILabel {}

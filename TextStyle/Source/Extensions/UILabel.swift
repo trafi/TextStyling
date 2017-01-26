@@ -39,6 +39,3 @@ public extension UILabel {
     }
     #endif
 }
-
-/// `UILabel` that renders in Interface Builder as an `@IBDesignbale`
-@IBDesignable public class UILabelDesignable: UILabel {}
