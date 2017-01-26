@@ -42,7 +42,7 @@ extension TextStyle: IBInspectable {
 ```
 In the Interface Builder set `Text Style` to match your style's name.
 
-To see style changes right in the Interface Builder use `Designable` [UI elements classes](/TextStyle/Source/UIDesignable.swift). (i.e. `UILabelDesignable`). You should download and add them to your project manually.
+To see style changes right in the Interface Builder use `Designable` [UI elements classes](/TextStyleDesignables.swift). (i.e. `UILabelDesignable`). You should and add them to your project manually.
 
 # Installation
 Using [Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application). Add the following line to your Cartfile:
