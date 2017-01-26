@@ -1,5 +1,5 @@
 //
-//  IBInspectable.swift
+//  TextStyleDesignables.swift
 //  TextStyle
 //
 //  Created by Domas on 01/26/2017.
