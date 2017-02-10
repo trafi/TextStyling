@@ -11,7 +11,7 @@ import UIKit
 // MARK: TextStylable
 
 extension UITextField: TextStylable {
-    public func set(textStyle textStyle: TextStyle) {
+    public func set(textStyle: TextStyle) {
         if let textColor = textStyle.color {
             self.textColor = textColor
         }

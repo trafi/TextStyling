@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol TextStylable {
-    func set(textStyle textStyle: TextStyle)
+    func set(textStyle: TextStyle)
 }

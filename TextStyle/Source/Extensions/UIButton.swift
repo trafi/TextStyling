@@ -11,9 +11,9 @@ import UIKit
 // MARK: TextStylable
 
 extension UIButton: TextStylable {
-    public func set(textStyle textStyle: TextStyle) {
+    public func set(textStyle: TextStyle) {
         if let color = textStyle.color {
-            setTitleColor(color, forState: .Normal)
+            setTitleColor(color, for: UIControlState())
         }
         titleLabel?.set(textStyle: textStyle)
     }

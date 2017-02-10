@@ -10,16 +10,16 @@ import TextStyle
 
 extension TextStyle {
     static let header = TextStyle()
-        .with(font: .boldSystemFontOfSize(18))
-        .with(color: .redColor())
-        .with(alignment: .Center)
+        .with(font: .boldSystemFont(ofSize: 18))
+        .with(color: .red)
+        .with(alignment: .center)
     
     static let body = TextStyle()
-        .with(font: .systemFontOfSize(16))
+        .with(font: .systemFont(ofSize: 16))
     
     static let footer = TextStyle()
-        .with(font: .italicSystemFontOfSize(12))
-        .with(color: .grayColor())
+        .with(font: .italicSystemFont(ofSize: 12))
+        .with(color: .gray)
 }
 
 extension TextStyle: IBInspectable {

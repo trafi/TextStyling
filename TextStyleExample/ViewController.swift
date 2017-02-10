@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var label: UILabel! {
         didSet {
-            label.set(textStyle: TextStyle.header.with(color: .blueColor()))
+            label.set(textStyle: TextStyle.header.with(color: .blue))
             label.text = "From code"
         }
     }
@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet var attributedLabel: UILabel! {
         didSet {
             let style = TextStyle()
-                .with(font: .italicSystemFontOfSize(18))
-                .with(color: .grayColor())
-                .with(alignment: .Right)
+                .with(font: .italicSystemFont(ofSize: 18))
+                .with(color: .gray)
+                .with(alignment: .right)
             
             attributedLabel.attributedText = "Attributed string\nFrom code".with(textStyle: style)
         }

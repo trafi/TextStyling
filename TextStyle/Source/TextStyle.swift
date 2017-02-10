@@ -37,19 +37,19 @@ public struct TextStyle {
 }
 
 public extension TextStyle {
-    private func with(@noescape changes: (inout TextStyle) -> ()) -> TextStyle {
+    private func with(_ changes: (inout TextStyle) -> ()) -> TextStyle {
         var changedTextStyle = self
         changes(&changedTextStyle)
         return changedTextStyle
     }
     
-    func with(font font: UIFont) -> TextStyle {
-        return with{ $0.font = font }
+    func with(font: UIFont) -> TextStyle {
+        return with({ $0.font = font })
     }
-    func with(color color: UIColor) -> TextStyle {
-        return with{ $0.color = color }
+    func with(color: UIColor) -> TextStyle {
+        return with({ $0.color = color })
     }
-    func with(alignment alignment: NSTextAlignment) -> TextStyle {
-        return with{ $0.alignment = alignment }
+    func with(alignment: NSTextAlignment) -> TextStyle {
+        return with({ $0.alignment = alignment })
     }
 }
