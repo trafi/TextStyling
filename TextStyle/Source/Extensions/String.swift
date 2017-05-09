@@ -19,7 +19,7 @@ extension String {
 
 extension NSAttributedString {
     public func with(textStyle: TextStyle) -> NSAttributedString {
-        return string.with(textStyle: textStyle)
+        return with(textStyle: textStyle, forRange: NSMakeRange(0, (string as NSString).length))
     }
     public func with(textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
         let mutable = self as? NSMutableAttributedString ?? NSMutableAttributedString(attributedString: self)
