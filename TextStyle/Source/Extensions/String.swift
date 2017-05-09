@@ -23,7 +23,7 @@ extension NSAttributedString {
     }
     public func with(textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
         let mutable = self as? NSMutableAttributedString ?? NSMutableAttributedString(attributedString: self)
-        mutable.setAttributes(textStyle.attributes, range: range)
+        mutable.addAttributes(textStyle.attributes, range: range)
         return mutable
     }
 }
