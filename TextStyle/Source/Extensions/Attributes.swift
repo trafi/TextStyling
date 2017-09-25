@@ -9,13 +9,13 @@
 import UIKit
 
 extension TextStyle {
-    public var attributes: [String: AnyObject] {
+    public var attributes: [NSAttributedStringKey: AnyObject] {
         
-        var attributes = [String: AnyObject]()
+        var attributes = [NSAttributedStringKey: AnyObject]()
         
-        attributes[NSForegroundColorAttributeName] = color
-        attributes[NSFontAttributeName] = font
-        attributes[NSParagraphStyleAttributeName] = alignment.flatMap { alignment in
+        attributes[.foregroundColor] = color
+        attributes[.font] = font
+        attributes[.paragraphStyle] = alignment.flatMap { alignment in
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = alignment
             return paragraphStyle
