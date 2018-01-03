@@ -21,7 +21,16 @@ extension UILabel: TextStylable {
         if let textAlignment = textStyle.alignment {
             self.textAlignment = textAlignment
         }
+
+        if textStyle.lineHeight != nil {
+            print("Setting Line Height directly on UILabel not supported, use String().with(textStyle: TextStyle) -> NSAttributedString")
+        }
+
+        if textStyle.uppercased == true {
+            print("Setting uppercased directly on UILabel not supported, use String().with(textStyle: TextStyle) -> NSAttributedString")
+        }
     }
+
 }
 
 // MARK: Interface Builder

@@ -10,7 +10,8 @@ import Foundation
 
 extension String {
     public func with(textStyle: TextStyle) -> NSAttributedString {
-        return NSAttributedString(string: self, attributes: textStyle.attributes)
+        let string = textStyle.uppercased ? self.uppercased() : self
+        return NSAttributedString(string: string, attributes: textStyle.attributes)
     }
     public func with(textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
         return NSAttributedString(string: self).with(textStyle: textStyle, forRange: range)
@@ -23,6 +24,11 @@ extension NSAttributedString {
     }
     public func with(textStyle: TextStyle, forRange range: NSRange) -> NSAttributedString {
         let mutable = self as? NSMutableAttributedString ?? NSMutableAttributedString(attributedString: self)
+
+        if textStyle.uppercased {
+            mutable.mutableString.setString(string.uppercased())
+        }
+
         mutable.addAttributes(textStyle.attributes, range: range)
         return mutable
     }

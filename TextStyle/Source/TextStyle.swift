@@ -32,6 +32,8 @@ public struct TextStyle {
     var font: UIFont?
     var color: UIColor?
     var alignment: NSTextAlignment?
+    var lineHeight: CGFloat?
+    var uppercased: Bool = false
     
     public init(){}
 }
@@ -51,5 +53,11 @@ public extension TextStyle {
     }
     func with(alignment: NSTextAlignment) -> TextStyle {
         return with({ $0.alignment = alignment })
+    }
+    func with(lineHeight: CGFloat) -> TextStyle {
+        return with({ $0.lineHeight = lineHeight })
+    }
+    func with(uppercased: Bool) -> TextStyle {
+        return with({ $0.uppercased = uppercased })
     }
 }
