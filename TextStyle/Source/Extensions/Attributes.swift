@@ -15,12 +15,27 @@ extension TextStyle {
         
         attributes[.foregroundColor] = color
         attributes[.font] = font
-        attributes[.paragraphStyle] = alignment.flatMap { alignment in
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.alignment = alignment
-            return paragraphStyle
-        }
+        attributes[.paragraphStyle] = paragraphStyle
         
         return attributes
+    }
+
+    private var paragraphStyle: NSMutableParagraphStyle? {
+        if lineHeight == nil && alignment == nil {
+            return nil
+        }
+
+        let paragraphStyle = NSMutableParagraphStyle()
+
+        if let alignment = alignment {
+            paragraphStyle.alignment = alignment
+        }
+
+        if let lineHeight = lineHeight {
+            paragraphStyle.minimumLineHeight = lineHeight
+            paragraphStyle.maximumLineHeight = lineHeight
+        }
+
+        return paragraphStyle
     }
 }

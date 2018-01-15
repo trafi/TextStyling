@@ -24,6 +24,8 @@ class ViewController: UIViewController {
                 .with(font: .italicSystemFont(ofSize: 18))
                 .with(color: .gray)
                 .with(alignment: .right)
+                .with(lineHeight: 50.0)
+                .with(uppercased: true)
             
             attributedLabel.attributedText = "Attributed string\nFrom code".with(textStyle: style)
         }
