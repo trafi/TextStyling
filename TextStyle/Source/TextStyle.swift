@@ -31,10 +31,10 @@ import UIKit
 public struct TextStyle {
     var font: UIFont?
     var color: UIColor?
-    var alignment: NSTextAlignment?
-    var lineHeight: CGFloat?
     var uppercased: Bool = false
-    
+    var paragraphAttributes: [ReferenceWritableKeyPathSetter<NSMutableParagraphStyle>] = []
+    var stringAttributes: [NSAttributedString.Key: Any] = [:]
+
     public init(){}
 }
 
@@ -46,18 +46,26 @@ public extension TextStyle {
     }
     
     func with(font: UIFont) -> TextStyle {
-        return with({ $0.font = font })
+        with { $0.font = font }
     }
     func with(color: UIColor) -> TextStyle {
-        return with({ $0.color = color })
+        with { $0.color = color }
     }
     func with(alignment: NSTextAlignment) -> TextStyle {
-        return with({ $0.alignment = alignment })
-    }
-    func with(lineHeight: CGFloat) -> TextStyle {
-        return with({ $0.lineHeight = lineHeight })
+        with(\.alignment, alignment)
     }
     func with(uppercased: Bool) -> TextStyle {
-        return with({ $0.uppercased = uppercased })
+        with { $0.uppercased = uppercased }
+    }
+    func with(lineHeight: CGFloat) -> TextStyle {
+        self
+            .with(\.minimumLineHeight, lineHeight)
+            .with(\.maximumLineHeight, lineHeight)
+    }
+    func with(_ key: NSAttributedString.Key, _ value: Any) -> TextStyle {
+        with { $0.stringAttributes[key] = value }
+    }
+    func with<T>(_ keyPath: ReferenceWritableKeyPath<NSMutableParagraphStyle, T>, _ value: T) -> TextStyle {
+        with { $0.paragraphAttributes.append(.init(keyPath: keyPath, value: value)) }
     }
 }

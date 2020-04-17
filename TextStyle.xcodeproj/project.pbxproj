@@ -21,6 +21,7 @@
 		D36852E01DAE4D0D00EDFCA1 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */; };
 		D36852E21DAE4D8A00EDFCA1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36852E11DAE4D8A00EDFCA1 /* UIButton.swift */; };
 		D3839C231DAF7FAF00ABCD81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3839C221DAF7FAF00ABCD81 /* String.swift */; };
+		D3C16B032449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C16B022449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift */; };
 		D3DCEF901DEF3859001431D4 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DCEF8F1DEF3858001431D4 /* Attributes.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		D36852DF1DAE4D0D00EDFCA1 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		D36852E11DAE4D8A00EDFCA1 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D3839C221DAF7FAF00ABCD81 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D3C16B022449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceWritableKeyPathSetter.swift; sourceTree = "<group>"; };
 		D3DCEF8F1DEF3858001431D4 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */,
 				D31C22751DAF7A9D00600BC3 /* TextStylable.swift */,
 				D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */,
+				D3C16B022449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift */,
 				D3347FD81E3A9E6300CF9AF3 /* TextStyleDesignables.swift */,
 				D36852DA1DAE4B9800EDFCA1 /* Extensions */,
 			);
@@ -255,6 +258,7 @@
 				D36852D91DAE4B5100EDFCA1 /* IBInspectable.swift in Sources */,
 				D36852DC1DAE4B9F00EDFCA1 /* UILabel.swift in Sources */,
 				D36852E01DAE4D0D00EDFCA1 /* UITextView.swift in Sources */,
+				D3C16B032449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift in Sources */,
 				D36852D71DAE4AC300EDFCA1 /* TextStyle.swift in Sources */,
 				D31C22761DAF7A9D00600BC3 /* TextStylable.swift in Sources */,
 				D36852DE1DAE4C2C00EDFCA1 /* UITextField.swift in Sources */,

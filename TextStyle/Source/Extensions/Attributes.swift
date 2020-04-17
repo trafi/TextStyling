@@ -9,9 +9,9 @@
 import UIKit
 
 extension TextStyle {
-    public var attributes: [NSAttributedStringKey: AnyObject] {
+    public var attributes: [NSAttributedString.Key: AnyObject] {
         
-        var attributes = [NSAttributedStringKey: AnyObject]()
+        var attributes = [NSAttributedString.Key: AnyObject]()
         
         attributes[.foregroundColor] = color
         attributes[.font] = font
@@ -21,20 +21,11 @@ extension TextStyle {
     }
 
     private var paragraphStyle: NSMutableParagraphStyle? {
-        if lineHeight == nil && alignment == nil {
-            return nil
-        }
+
+        guard !paragraphAttributes.isEmpty else { return nil }
 
         let paragraphStyle = NSMutableParagraphStyle()
-
-        if let alignment = alignment {
-            paragraphStyle.alignment = alignment
-        }
-
-        if let lineHeight = lineHeight {
-            paragraphStyle.minimumLineHeight = lineHeight
-            paragraphStyle.maximumLineHeight = lineHeight
-        }
+        paragraphAttributes.forEach { $0.write(paragraphStyle) }
 
         return paragraphStyle
     }
