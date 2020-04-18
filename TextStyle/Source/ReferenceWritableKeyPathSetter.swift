@@ -19,6 +19,6 @@ struct ReferenceWritableKeyPathSetter<Root> {
 
 extension Array {
     subscript<Root, Value>(_ keyPath: ReferenceWritableKeyPath<Root, Value>) -> Value? where Element == ReferenceWritableKeyPathSetter<Root> {
-        return nil
+        first { $0[keyPath] != nil }?[keyPath]
     }
 }
