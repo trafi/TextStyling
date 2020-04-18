@@ -18,17 +18,10 @@ extension UITextField: TextStylable {
         if let font = textStyle.font {
             self.font = font
         }
-        if let textAlignment = textStyle.alignment {
+        if let textAlignment = textStyle.paragraphAttributes[\.alignment] {
             self.textAlignment = textAlignment
         }
-
-        if textStyle.lineHeight != nil {
-            print("Setting Line Height directly on UITextField not supported, use String().with(textStyle: TextStyle) -> NSAttributedString")
-        }
-
-        if textStyle.uppercased == true {
-            print("Setting uppercased directly on UITextField not supported, use String().with(textStyle: TextStyle) -> NSAttributedString")
-        }
+        validateAttributes(of: textStyle)
     }
 }
 

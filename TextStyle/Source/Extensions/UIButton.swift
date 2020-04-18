@@ -13,7 +13,7 @@ import UIKit
 extension UIButton: TextStylable {
     public func set(textStyle: TextStyle) {
         if let color = textStyle.color {
-            setTitleColor(color, for: UIControlState())
+            setTitleColor(color, for: UIControl.State())
         }
         titleLabel?.set(textStyle: textStyle)
     }
