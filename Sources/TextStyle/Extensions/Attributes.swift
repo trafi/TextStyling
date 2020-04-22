@@ -9,9 +9,9 @@
 import UIKit
 
 extension TextStyle {
-    public var attributes: [NSAttributedString.Key: AnyObject] {
+    public var attributes: [NSAttributedString.Key: Any] {
         
-        var attributes = [NSAttributedString.Key: AnyObject]()
+        var attributes = stringAttributes
         
         attributes[.foregroundColor] = color
         attributes[.font] = font

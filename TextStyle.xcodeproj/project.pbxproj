@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		D31C22751DAF7A9D00600BC3 /* TextStylable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStylable.swift; sourceTree = "<group>"; };
 		D3347FD81E3A9E6300CF9AF3 /* TextStyleDesignables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleDesignables.swift; sourceTree = SOURCE_ROOT; };
+		D33BE5A924502F5400DE0A47 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D35810471DAF66F50062BE59 /* TextStyleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextStyleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35810491DAF66F50062BE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D358104B1DAF66F50062BE59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33BE5CA2450318B00DE0A47 /* TextStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */,
+				D31C22751DAF7A9D00600BC3 /* TextStylable.swift */,
+				D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */,
+				D3C16B022449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift */,
+				D36852DA1DAE4B9800EDFCA1 /* Extensions */,
+			);
+			path = TextStyle;
+			sourceTree = "<group>";
+		};
 		D35810481DAF66F50062BE59 /* TextStyleExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +94,9 @@
 		D36852C01DAE4A1B00EDFCA1 = {
 			isa = PBXGroup;
 			children = (
-				D36852CC1DAE4A1B00EDFCA1 /* TextStyle */,
+				D33BE5A924502F5400DE0A47 /* Package.swift */,
+				D3347FD81E3A9E6300CF9AF3 /* TextStyleDesignables.swift */,
+				D36852CC1DAE4A1B00EDFCA1 /* Sources */,
 				D35810481DAF66F50062BE59 /* TextStyleExample */,
 				D36852CB1DAE4A1B00EDFCA1 /* Products */,
 			);
@@ -96,26 +111,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D36852CC1DAE4A1B00EDFCA1 /* TextStyle */ = {
+		D36852CC1DAE4A1B00EDFCA1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D36852D51DAE4A9300EDFCA1 /* Source */,
+				D33BE5CA2450318B00DE0A47 /* TextStyle */,
 				D36852CE1DAE4A1B00EDFCA1 /* Info.plist */,
 			);
-			path = TextStyle;
-			sourceTree = "<group>";
-		};
-		D36852D51DAE4A9300EDFCA1 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				D36852D61DAE4AC300EDFCA1 /* TextStyle.swift */,
-				D31C22751DAF7A9D00600BC3 /* TextStylable.swift */,
-				D36852D81DAE4B5100EDFCA1 /* IBInspectable.swift */,
-				D3C16B022449F4C700BA323F /* ReferenceWritableKeyPathSetter.swift */,
-				D3347FD81E3A9E6300CF9AF3 /* TextStyleDesignables.swift */,
-				D36852DA1DAE4B9800EDFCA1 /* Extensions */,
-			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D36852DA1DAE4B9800EDFCA1 /* Extensions */ = {
@@ -436,7 +438,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/TextStyle/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trafi.TextStyle;
@@ -457,7 +459,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/TextStyle/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trafi.TextStyle;
